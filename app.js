@@ -52,5 +52,11 @@ function mainCtrl ($scope)
             }
          });
         };
+	$scope.buy = function()
+	{
+	  $scope.cart=[];
+          $scope.total=0;
+	  alert("Your Credit Card will be billed shortly");
+	}
 
 }
