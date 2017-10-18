@@ -7,26 +7,34 @@ function mainCtrl ($scope)
 
         $scope.addItem = function (item)
 	{
+console.log("HOY");
 		if (item == "Washer")
 		{
-			$scope.cart.push({Item: item, price: "800", done:false})
+			$scope.cart.push({Item: item, price: "800", done:false});
 		}
 		if (item == "Iphone")
 		{
-			$scope.cart.push({Item: item, price: "700", done:false})
+			$scope.cart.push({Item: item, price: "700", done:false});
 		}
 		if (item == "Mac")
 		{
-			$scope.cart.push({Item: item, price: "1200", done:false})
+			$scope.cart.push({Item: item, price: "1200", done:false});
 		}
 		 if (item == "Fridge")
                 {
-                        $scope.cart.push({Item: item, price: "1000", done:false})
+                        $scope.cart.push({Item: item, price: "1000", done:false});
                 }
 		 if (item == "Monitor")
                 {
-                        $scope.cart.push({Item: item, price: "320", done:false})
+                        $scope.cart.push({Item: item, price: "320", done:false});
                 }
+console.log("HEY");
+             
+            for(var i  = 0; i < cart.length; i++)
+            {
+                  console.log("HELLO");
+                  console.log(cart[i].Item);
+            }
 
 	};
 }
