@@ -5,7 +5,7 @@ function mainCtrl ($scope)
 {
 	$scope.cart = [];
 
-	scope.addItem = function (item)
+        $scope.addItem = function (item)
 	{
 		if (item == "Washer")
 		{
