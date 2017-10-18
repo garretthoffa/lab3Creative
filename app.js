@@ -33,7 +33,7 @@ function mainCtrl ($scope)
                   console.log($scope.cart[i].Item);
             }
 
-	};
+	}
         $scope.remove = function()
         {
           var oldCart = $scope.cart;
@@ -42,6 +42,6 @@ function mainCtrl ($scope)
               $scope.cart.push(x);
             }
          });
-        };
+        }
 
 }
