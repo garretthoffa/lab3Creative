@@ -37,11 +37,12 @@ function mainCtrl ($scope)
         $scope.remove = function()
         {
           var oldCart = $scope.cart;
+	  $scope.cart=[];
           angular.forEach(oldCart,function(x) {
             if(!x.done){
               $scope.cart.push(x);
             }
          });
-        }
+        };
 
 }
