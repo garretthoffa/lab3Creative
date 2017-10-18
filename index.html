@@ -6,10 +6,10 @@
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
   <script src="app.js"></script>
 </head>
-<body>
+<body ng-app='myApp' ng-controller="shoppingCart">
   <h1> Shopping Cart</h1>
   <p>Select items to add to your shopping cart.</p>
-  <p>MacBook Pro: $1200 <button ng-click="addItem('Mac')">Add to Cart</button></p>
+  <p>MacBook Pro: $1200 <button ng-click="addMac()">Add to Cart</button></p>
   <p>Iphone 7: $700 <button ng-click="addItem('Iphone')">Add to Cart</button></p>
   <p>Maytag Washer: $800 <button ng-click="addItem('Washer')">Add to Cart</button></p>
   <p>Whirlpool Fridge $1000 <button ng-click="addItem('Fridge')">Add to Cart</button></p>

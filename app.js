@@ -4,7 +4,12 @@ angular.module('myApp', [])
 function mainCtrl ($scope) 
 {
 	$scope.cart = [];
-
+	console.log("mainCtrl");
+	$scope.addMac = function ()
+	{
+		$scope.cart.push({Item: "MacBook", price:"$1200", done:false});
+		console.log("AddMac() function");
+	};
         $scope.addItem = function (item)
 	{
 console.log("HOY");
