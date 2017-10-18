@@ -16,5 +16,8 @@
   <p>Dell 2k Monitor $320 <button ng-click="addItem('Monitor')">Add to Cart</button></p>
  <br>
   <h3>Here is your cart:</h3>
+   <div ng-repeat="x in cart">
+    <input type="checkbox" ng-model="x.done"><span ng-bind="x.Item"+" x.price"></span>
+   </div>
 </body>
 </html>
