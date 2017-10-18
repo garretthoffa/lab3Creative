@@ -12,7 +12,6 @@ function mainCtrl ($scope)
 	};
         $scope.addItem = function (item)
 	{
-console.log("HOY");
 		if (item == "Washer")
 		{
 			$scope.cart.push({Item: item, price: "800", done:false});
@@ -33,12 +32,10 @@ console.log("HOY");
                 {
                         $scope.cart.push({Item: item, price: "320", done:false});
                 }
-console.log("HEY");
              
-            for(var i  = 0; i < cart.length; i++)
+            for(var i  = 0; i <$scope.cart.length; i++)
             {
-                  console.log("HELLO");
-                  console.log(cart[i].Item);
+                  console.log($scope.cart[i].Item);
             }
 
 	};
