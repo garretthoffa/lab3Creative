@@ -17,7 +17,7 @@
  <br>
   <h3>Here is your cart:</h3>
    <div ng-repeat="x in cart">
-    <input type="checkbox" ng-model="x.done"><span ng-bind="x.Item"+" x.price"></span>
+    <input type="checkbox" ng-model="x.done"><span ng-bind="x.Item"></span> {{x.price}}
    </div>
 </body>
 </html>
