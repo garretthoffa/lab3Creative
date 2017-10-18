@@ -56,7 +56,7 @@ function mainCtrl ($scope)
 	{
 	  $scope.cart=[];
           $scope.total=0;
-	  alert("Your Credit Card will be billed shortly");
+	  alert("Your Credit Card will be billed shortly. Thank you for your money.");
 	}
 
 }
