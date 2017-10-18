@@ -7,20 +7,22 @@
   <script src="app.js"></script>
 </head>
 <body ng-app='myApp' ng-controller="shoppingCart">
-  <h1> Shopping Cart</h1>
-  <p>Select items to add to your shopping cart.</p>
-  <p>MacBook Pro: $1200 <button ng-click="addItem('MacBook')">Add to Cart</button></p>
-  <p>Iphone 7: $700 <button ng-click="addItem('Iphone')">Add to Cart</button></p>
-  <p>Maytag Washer: $800 <button ng-click="addItem('Washer')">Add to Cart</button></p>
-  <p>Whirlpool Fridge $1000 <button ng-click="addItem('Fridge')">Add to Cart</button></p>
-  <p>Dell 2k Monitor $320 <button ng-click="addItem('Monitor')">Add to Cart</button></p>
+  <h1 id="pageTitle" > Shopping Cart</h1>
+  <p id="instructions">Select items to add to your shopping cart.</p>
+  <p id="macPTag">MacBook Pro: $1200 <button ng-click="addItem('MacBook')">Add to Cart</button></p>
+  <p id="iphonePTag">Iphone 7: $700 <button ng-click="addItem('Iphone')">Add to Cart</button></p>
+  <p id=washerPTag">Maytag Washer: $800 <button ng-click="addItem('Washer')">Add to Cart</button></p>
+  <p id="fridgePTag">Whirlpool Fridge: $1000 <button ng-click="addItem('Fridge')">Add to Cart</button></p>
+  <p id="monitorPTag">Dell 2k Monitor: $320 <button ng-click="addItem('Monitor')">Add to Cart</button></p>
  <br>
-  <h3>Here is your cart:</h3>
-   <div ng-repeat="x in cart">
-    <input type="checkbox" ng-model="x.done"> <span ng-bind="x.Item"></span>: ${{x.price}}
+  <h3 id="cartHeader">Here is your cart:</h3>
+   <div id="cartDiv" ng-repeat="x in cart">
+    <input type="checkbox" ng-model="x.done"> <span ng-bind="x.Item"></span> ${{x.price}}
    </div>
   <div>
    <p>Your cart total is: ${{total}}</p>
   <button ng-click="remove()">Remove Selected Items</button>
+  <button ng-click="buy()">Buy It Now</button>
+  </div>
 </body>
 </html>
