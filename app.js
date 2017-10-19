@@ -33,6 +33,26 @@ function mainCtrl ($scope)
                         $scope.cart.push({Item: item, price: 320, done:false});
                 	$scope.total += 320;
 		}
+                 if (item == "Echo")
+                {
+                        $scope.cart.push({Item: item, price: 100, done:false});
+                        $scope.total += 100;
+                }
+                 if (item == "Vacuum")
+                {
+                        $scope.cart.push({Item: item, price: 330, done:false});
+                        $scope.total += 330;
+                }
+                 if (item == "Robot")
+                {
+                        $scope.cart.push({Item: item, price: 450, done:false});
+                        $scope.total += 450;
+                }
+                if (item == "VR")
+                {
+                        $scope.cart.push({Item: item, price: 38, done:false});
+                        $scope.total += 38;
+                }
              
             for(var i  = 0; i <$scope.cart.length; i++)
             {
