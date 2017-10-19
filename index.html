@@ -2,28 +2,49 @@
   <title>
    Shopping Cart
   </title>
+  <link rel="shortcut icon" href="http://www.clker.com/cliparts/8/4/2/d/11954275791751619642cart_pommi_02.svg.hi.png" />
 <head>
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
   <script src="app.js"></script>
   <link rel="stylesheet" type="text/css" href="app.css">
 </head>
 <body ng-app='myApp' ng-controller="shoppingCart">
-  <h1 id="pageTitle" > Shopping Cart</h1>
-  <p id="instructions">Select items to add to your shopping cart.</p>
-  <p id="macPTag">MacBook Pro: $1200 <button ng-click="addItem('MacBook')">Add to Cart</button></p>
-  <p id="iphonePTag">Iphone 7: $700 <button ng-click="addItem('Iphone')">Add to Cart</button></p>
-  <p id=washerPTag">Maytag Washer: $800 <button ng-click="addItem('Washer')">Add to Cart</button></p>
-  <p id="fridgePTag">Whirlpool Fridge: $1000 <button ng-click="addItem('Fridge')">Add to Cart</button></p>
-  <p id="monitorPTag">Dell 2k Monitor: $320 <button ng-click="addItem('Monitor')">Add to Cart</button></p>
- <br>
+  <h1 id="pageTitle" ><span><img id="cartImg" style="display:inline-block;" src="http://www.clker.com/cliparts/8/4/2/d/11954275791751619642cart_pommi_02.svg.hi.png"></img></span>  Shopping Cart</h1>
+<hr>
+<br>
+  <h3 id="instructions">Select items to add to your shopping cart.</h3>
+<br> 
+  <div class = "products">
+    <div id="mac">
+      <img id= "macImg" src = "https://cdn.cultofmac.com/wp-content/uploads/2014/03/old-MacBook-Pro-13-640x386.jpg">
+      <p id="macPTag">MacBook Pro: $1200 <button ng-click="addItem('MacBook')">Add to Cart</button></p>
+    </div>
+    <div id = "iphone">
+      <img id = "iphoneImg" src="https://www.o2.co.uk/shop/homepage/images/shop15/brand/apple/iphone7/apple-iphone-7-gallery-img-5.jpg">
+      <p id="iphonePTag">Iphone 7: $700 <button ng-click="addItem('Iphone')">Add to Cart</button></p>
+    </div>
+    <div id = "washer">
+      <img id = "washerImg" src = "http://www.homedepot.com/catalog/productImages/1000/44/441027b1-d222-4375-a46e-a5a66eba78d0_1000.jpg">
+      <p id=washerPTag">Maytag Washer: $800 <button ng-click="addItem('Washer')">Add to Cart</button></p>
+    </div>
+    <div id = " fridge">
+      <img id = "fridgeImg" src = "http://ghk.h-cdn.co/assets/cm/15/12/5508e9860cdd9-ghk-whirlpool-gss26c4xxy00-refrigerator-mdn.jpg">
+      <p id="fridgePTag">Whirlpool Fridge: $1000 <button ng-click="addItem('Fridge')">Add to Cart</button></p>
+    </div>
+    <div id = "monitor">
+      <img id = "monitorImg" src="https://images10.newegg.com/ProductImage/24-260-234-01.jpg">
+      <p id="monitorPTag">Dell 2k Monitor: $320 <button ng-click="addItem('Monitor')">Add to Cart</button></p>
+    </div> 
+  </div>
+<br>
   <h3 id="cartHeader">Here is your cart:</h3>
    <div id="cartDiv" ng-repeat="x in cart">
     <input type="checkbox" ng-model="x.done"> <span ng-bind="x.Item"></span> ${{x.price}}
    </div>
   <div>
-   <p>Your cart total is: ${{total}}</p>
-  <button ng-click="remove()">Remove Selected Items</button>
-  <button ng-click="buy()">Buy It Now</button>
+   <h4 id="total">Your cart total is: ${{total}}</h4>
+  <button class="button" ng-click="remove()">Remove Selected Items</button>
+  <button class="button" ng-click="buy()">Buy It Now</button>
   </div>
 </body>
 </html>
