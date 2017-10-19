@@ -43,7 +43,7 @@ function mainCtrl ($scope)
                         $scope.cart.push({Item: item, price: 330, done:false});
                         $scope.total += 330;
                 }
-                 if (item == "Robot")
+                 if (item == "Mixer")
                 {
                         $scope.cart.push({Item: item, price: 450, done:false});
                         $scope.total += 450;
